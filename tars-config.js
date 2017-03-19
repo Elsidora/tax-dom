@@ -15,12 +15,15 @@ module.exports = {
     "js": {
         "workflow": "modular",
         "bundler": "webpack",
-        "lint": true,
+        "lint": false,
         "useBabel": true,
         "removeConsoleLog": true,
         "webpack": {
             "useHMR": false,
-            "providePlugin": {}
+            "providePlugin": {
+                $: 'jquery',
+                jQuery: 'jquery'
+            }
         },
         "jsPathsToConcatBeforeModulesJs": [],
         "lintJsCodeBeforeModules": false,
@@ -52,7 +55,10 @@ module.exports = {
     "templater": "jade",
     "cssPreprocessor": "stylus",
     "useImagesForDisplayWithDpi": [
-        96
+        96,
+        192,
+        288,
+        384
     ],
     "fs": {
         "staticFolderName": "static",

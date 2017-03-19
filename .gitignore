@@ -8,6 +8,7 @@ dev
 
 .idea
 npm-debug.log
+debug.log
 phantomjsdriver.log
 /nbproject/*
 

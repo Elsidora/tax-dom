@@ -1,19 +1,28 @@
 // Common styles of the project
-
-html, body
-    height 100%
-
-
-.page
-    // Стили для body
-
-.page__wrapper
-    min-height 100%
-    margin-bottom -50px
-
-
-* html .page__wrapper
-    height 100%
-
-.page__buffer
-    height 50px
+html
+	font-size 62.5%
+	box-sizing border-box
+*, *:before, *:after
+	box-sizing inherit
+body
+	font-size 1.6rem
+img
+	max-width 100%
+	height auto
+	box-sizing content-box
+a
+	text-decoration none
+ul
+	list-style none
+ul,li,p,h1,h2,h3
+	margin 0
+	padding 0
+.page__inner
+	display: flex
+	min-height 100vh
+	flex-direction column
+.page-content
+	flex 1
+.container
+	max-width $page-width
+	margin 0 auto
