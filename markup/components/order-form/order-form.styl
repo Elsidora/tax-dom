@@ -1,0 +1,100 @@
+.order-form
+	padding-left 15px
+	padding-right 15px
+	padding-top 60px
+	// padding-bottom 15px
+	background rgba(255,255,255,.8)
+	border-radius 10px
+	@media (max-width: 1024px)
+		margin-left 30px
+	@media (max-width: 768px)
+		margin-left 0
+		padding-left 0
+		padding-bottom 0
+div#sedi-orderform2-fields
+	border-radius 20px
+	box-shadow 0 10px 9px 1px rgba(0, 0, 0, 0.15)
+	border none
+#sedi-notify-navbar
+	display none
+	@media (max-width: 414px)
+		display none
+	@media (max-width: 768px)
+		.navbar-right
+			display none
+// #sedi-orderform2-cashless-container,
+#sedi-orderform2-cashless-ways,
+#sedi-orderform2-help
+	display none
+// #sedi-orderform2 #sedi-orderform2-section-tariff,
+// #sedi-orderform2 
+// 	width 100%
+// div#sedi-orderform2 .sedi-orderform2-row-part-half
+// 	margin-right 0
+div#sedi-orderform2 .sedi-orderform2-row-part-third
+	width 49%
+	margin-right 0
+div#sedi-orderform2-sections .sedi-orderform2-section .sedi-orderform2-section-title
+	border-radius 20px
+	padding 0.8em
+div#sedi-orderform2 .sedi-orderform2-section.sedi-orderform2-section-opened .sedi-orderform2-section-content
+	top 57%
+div#sedi-orderform2 .sedi-orderform2-row-part-third:first-child
+	margin-right 8px
+div#sedi-orderform2 INPUT[type='text'],
+div#sedi-orderform2 TEXTAREA
+	border-radius 20px
+	padding 0.8em
+div#sedi-orderform2 TEXTAREA
+	padding-top 1em
+	min-height 4rem
+#sedi-orderform2 .sedi-orderform2-row .sedi-orderform2-row-part-third:last-child
+	width 100%
+div#sedi-orderform2-order
+	width 240px
+	height auto
+	margin 0 auto
+	padding-left 0
+	color $white
+	font-size 1.4rem
+	line-height 4.6rem
+	font-weight 700
+	border-radius 25px
+	background none
+	background-color $form-btn
+	border 2px solid transparent
+	transition all 0.4s ease
+div#sedi-orderform2-order:hover
+	color $form-btn
+	background-color $white
+	border 2px solid $form-btn
+div#sedi-orderform2 INPUT[type='checkbox']
+	display none
+div#sedi-orderform2 INPUT[type='checkbox']:checked + label:after
+	display block
+	
+div#sedi-orderform2 label[for=sedi-orderform2-cashless]
+	position relative
+	padding-left 30px
+	cursor pointer
+	&:before,
+	&:after
+		position absolute
+		content ''
+		left 0
+	&:before
+		width 16px
+		height 16px
+		border 1px solid #bbb
+		border-radius 2px
+	&:after
+		display none
+		left 8px
+		top -6px
+		width 8px
+		height 18px
+		border-top none
+		border-left none
+		border-right 2px solid
+		border-bottom 2px solid
+		transform rotate(45deg)

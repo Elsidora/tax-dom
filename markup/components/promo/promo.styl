@@ -1,1 +1,59 @@
-
+.promo
+	&__inner
+		display -webkit-flex
+		display -ms-flex
+		display flex
+		align-items: stretch;
+		min-height 740px
+		background-image url('%=static=%general/bg1.jpg')
+		background-size 1200px, 740px, cover
+	&__left-col
+		width 40%
+	&__right-col
+		display -webkit-flex
+		display -ms-flex
+		display flex
+		flex-direction column
+		justify-content: center;
+		width 60%
+		padding-left 80px
+		h1
+			padding-left 35px
+			padding-top 100px
+			color $white
+			font-size 3.6rem
+			line-height 7.2rem
+		span
+			color $yellow
+		p
+			padding-left 35px
+			color $white
+			line-height 3.6rem
+	&__list
+		display -webkit-flex
+		display -ms-flex
+		display flex
+	&__item
+		margin-right 50px
+		padding-top 75px
+		color $white
+		font-size 1.6rem
+		line-height 3.2rem
+		&_order
+			background-image url(%=static=%minified-svg/123.svg)
+			background-size 60px 60px
+			background-repeat no-repeat
+			background-position 50% 5%
+		
+		&_sms
+			background-image url(%=static=%minified-svg/123.svg)
+			background-size 60px 60px
+			background-repeat no-repeat
+			background-position 50% 5%
+		
+		&_24-hours
+			background-image url(%=static=%minified-svg/123.svg)
+			background-size 60px 60px
+			background-repeat no-repeat
+			background-position 50% 5%
+		

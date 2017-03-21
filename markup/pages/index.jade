@@ -1,5 +1,6 @@
 extends ../components/layout-default/layout-default
 include ../components/header/header
+include ../components/content/index/main
 include ../components/footer/footer
 
 block head
@@ -8,4 +9,5 @@ block head
 	- var pageKeywords = 'my data';
 block content
 	+header
+	+main
 	+footer

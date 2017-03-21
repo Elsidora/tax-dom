@@ -1,5 +1,16 @@
+include ../order-form/order-form
 mixin promo(data)
 	+b.SECTION.promo
-		+e.inner.center
+		+e.inner
 			+e.left-col
+				+order-form
 			+e.right-col
+				h1 Такси 
+					span(data-attr='495') Москва 
+					|в Домодедово
+				p Удобное и недорогое такси в любое время в Аэропорт «Домодево»
+				+e.UL.list
+					+e.LI.item._order
+						|Быстрая подача заказа
+					+e.LI.item._sms SMS отслеживание
+					+e.LI.item._24-hours 24 часа в сутки
