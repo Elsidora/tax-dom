@@ -1,0 +1,115 @@
+.tariffs
+	&__inner
+		min-height 700px
+		padding 40px
+		background-image url(%=static=%general/bg2.jpg)
+		background-repeat: no-repeat
+		background-size 1200px, 700px, cover
+	&__list
+		display -webkit-flex
+		display -ms-flex
+		display flex
+		margin-bottom 60px
+		border 3px solid $white
+		border-radius 30px
+		overflow: hidden;
+	&__item
+		padding-right 52px
+		padding-left 52px
+		color $dark
+		font-size 1.8rem
+		line-height 3.6rem
+		background-color $white
+		border 1px solid $yellow
+		cursor pointer
+		transition background-color .4s ease
+		&:hover,
+		&_active
+			color $white
+			background-color transparent
+		&:first-child
+			border-left none
+		&:last-child
+			padding-left 60px
+			border-right none
+	&__wrapper
+		position relative
+//block tariff
+.tariff-item
+	display none
+	position absolute
+	left 0
+	top 0
+	&_econom
+		background-image url(%=static=%general/car-econom.png)
+		background-size 680px 270px
+		background-repeat no-repeat
+		background-position left bottom
+	&_active
+		display block
+	&__inner
+		display -webkit-flex
+		display -ms-flex
+		display flex
+	&__left-col
+		width 65%
+	&__right-col
+		display -webkit-flex
+		display -ms-flex
+		display flex
+		flex-direction column
+	&__title
+		margin-bottom 30px
+		color $white
+		font-size 3rem
+		line-height 3.6rem
+		font-weight 300
+	p
+		color $white
+		font-size 1.6rem
+		line-height 2.6rem
+		font-weight 300
+	&__list
+		margin-bottom 160px
+	&__item
+		padding-left 140px
+		padding-bottom 30px
+		color $white
+		font-size 1.4rem
+		line-height 3.6rem
+		font-weight 300
+		b
+			display block
+			font-size 2.4rem
+			line-height 3.6rem
+			font-weight 300
+		&_min-price
+			background-image url(%=static=%minified-svg/123.svg)
+			background-size 60px 60px
+			background-repeat no-repeat
+			background-position 40px 5%
+		&_min-race
+			background-image url(%=static=%minified-svg/123.svg)
+			background-size 60px 60px
+			background-repeat no-repeat
+			background-position 40px 5%
+		&_drive-more
+			background-image url(%=static=%minified-svg/123.svg)
+			background-size 60px 60px
+			background-repeat no-repeat
+			background-position 40px 5%
+	&__link
+		align-self: flex-end;
+		display inline-block
+		vertical-align top
+		margin-bottom 20px
+		padding-left 58px
+		padding-right 58px
+		color $white
+		font-size 1.6rem
+		line-height 3.6rem
+		font-weight 100
+		border 3px solid $yellow
+		border-radius 20px
+		&:hover
+			border 3px solid $white

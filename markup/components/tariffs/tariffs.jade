@@ -1,0 +1,52 @@
+mixin tariffs(data)
+	+b.SECTION.tariffs
+		+e.inner
+			- var items = ['Эконом', 'Комфорт', 'Универсал','Бизнес','Минивэн','Микроавтобус']
+			- var price = [[350,8,24],[370,9,20]]
+			+e.UL.list
+				each item, index in items
+					if index === 0
+						+e.LI.item._active.tariff-toggle #{item}
+					else
+						+e.LI.item.tariff-toggle #{item}
+			+e.wrapper
+				+b.SECTION.tariff-item._econom._active.tariff-item-toggle
+					+e.inner
+						+e.left-col
+							+e.H2.title
+								| Тариф "#{items[0]}"
+							p Такси эконом - комфорт и фиксированный тариф в любую точку города.
+								|Имея многолетний опыт в сфере транспортных перевозок, такси эконом Москва разработала свою отлаженную систему работы.
+							p Наша цель – это безопасная и комфортная поездка клиента. Именно поэтому мы тщательно подходим к подбору сотрудников в нашу службу такси.
+						+e.right-col
+							+e.UL.list
+								+e.LI.item._min-price
+									span Минимальная цена
+									b #{price[0][0]} &#8381;
+								+e.LI.item._min-race
+									span Минимальная поездка
+									b #{price[0][1]} км
+								+e.LI.item._drive-more
+									span Далее за километр
+									b #{price[0][2]} &#8381;
+							+e.A.link(href='#') Подробнее
+				+b.SECTION.tariff-item.tariff-item-toggle
+					+e.inner
+						+e.left-col
+							+e.H2.title
+								| Тариф "#{items[1]}"
+							p Такси эконом - комфорт и фиксированный тариф в любую точку города.
+								|Имея многолетний опыт в сфере транспортных перевозок, такси эконом Москва разработала свою отлаженную систему работы.
+							p Наша цель – это безопасная и комфортная поездка клиента. Именно поэтому мы тщательно подходим к подбору сотрудников в нашу службу такси.
+						+e.right-col
+							+e.UL.list
+								+e.LI.item
+									span Минимальная цена
+									b #{price[1][0]} &#8381;
+								+e.LI.item
+									span Минимальная поездка
+									b #{price[1][1]} км
+								+e.LI.item
+									span Далее за километр
+									b #{price[1][2]} &#8381;
+							+e.A.link(href='#') Подробнее

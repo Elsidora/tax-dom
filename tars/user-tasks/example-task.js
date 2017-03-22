@@ -15,7 +15,7 @@ const tarsConfig = tars.config;
  */
 module.exports = function () {
 
-    return gulp.task('task-name', /*['required-task-name'],*/ function (done) {
+    return gulp.task('task-name', /* ['required-task-name'],*/ function (done) {
         return gulp.src(/* path-string or array of path-strings to files */)
             .pipe(plumber({
                 errorHandler: function (error) {
