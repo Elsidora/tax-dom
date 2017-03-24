@@ -1,9 +1,6 @@
 let tabBtn = document.querySelectorAll('.tariff-toggle');
 let slideItem = document.querySelectorAll('.tariff-item-toggle');
 
-for (let i = 0; i < tabBtn.length; i++) {
-    tabBtn[i].addEventListener('click', slideChange);
-}
 function slideChange(e) {
     let itemAttr = this.getAttribute('data-name');
     let slideItemAttr = [];
@@ -20,4 +17,7 @@ function slideChange(e) {
             }
         }
     }
+}
+for (let i = 0; i < tabBtn.length; i++) {
+    tabBtn[i].addEventListener('click', slideChange);
 }
