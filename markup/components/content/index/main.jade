@@ -7,7 +7,37 @@ mixin main()
 	+b.MAIN.page-content
 		+e.inner.center
 			+promo
-			+tariffs('index')
+			+tariffs({mod:'index',
+								tariffs:
+											[
+												{
+													name:'Эконом',
+													mod:'econom',
+													price:[11,12,13]
+												},
+												{
+													name:'Комфорт',
+													mod:'comfort',
+													price:[21,22,23]
+												},
+												{
+													name:'Универсал',
+													mod:'universal',
+													price:[31,32,33]
+												},
+												{
+													name:'Бизнес',
+													mod:'biznes',
+													price:[41,42,43]
+												},
+												{
+													name:'Минивэн',
+													mod:'miniven',
+													price:[51,52,53]
+												}
+											]
+								
+							})
 			+services
 			+reviews
 			+advantages
