@@ -1,3 +1,22 @@
+include ../socials/socials
+include ../logo/logo
 mixin footer(data)
 	+b.FOOTER(class='page-footer')
-		h2 мой футер
+		+e.inner.center
+			+e.right-col
+				+logo(250,250)
+				+e.P.text 
+					strong Такси 
+						span Москва 495 
+					|— залог 
+					br
+					|безопасности и качества сервиса.
+				+e.A(href='#').write-us Связаться с нами
+				+socials({vkontakt:'https://vk.com/taximoscow495',
+								facebook:'https://www.facebook.com/groups/1014505595361605',
+								instagram:'https://www.instagram.com/taxi_moscow495',
+								twitter:'https://twitter.com/Taxi_Moscow495',
+								ok:'https://ok.ru/group/53073527963794',
+								google:'https://plus.google.com/u/0/110710119950643533055',
+								mail:'https://my.mail.ru/community/taxi-moscow495.ru'
+							})

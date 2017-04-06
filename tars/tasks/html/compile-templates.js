@@ -204,7 +204,9 @@ module.exports = () => {
                     compileError = true;
                 }
             }))
-            .pipe(jadeAndPugInheritanceProcessing())
+            .pipe(jadeAndPugInheritanceProcessing({
+                locals: {data: fs.readFileSync('dev/data.json')}
+            }))
             .pipe(
                 mocksData
                     ? tars.templater.fn(mocksData)

@@ -1,0 +1,5 @@
+mixin socials(data)
+	+b.socials
+		each item, key in data
+			+e.A(class='__item_#{key}' href= item) #{key}
+		
