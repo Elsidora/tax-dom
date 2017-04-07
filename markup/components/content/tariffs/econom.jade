@@ -1,0 +1,29 @@
+include ../../promo/promo
+//- include ../../tariffs/tariffs
+//- include ../../tariff-inner/tariff-inner
+include ../../town-regions-prices/town-regions-prices
+include ../../services/services
+include ../../reviews/reviews
+include ../../advantages/advantages
+mixin main()
+	+b.MAIN.page-content
+		+e.inner.center
+			+promo
+			+b.SECTION.tariff-page
+				+e.inner._econom
+					+e.UL.list
+						+e.LI.item._min-price
+							span Минимальная цена
+							b #{data.tariffs[0].price[0]} &#8381;
+						+e.LI.item._min-race
+							span Минимальная поездка
+							b #{data.tariffs[0].price[1]} км
+						+e.LI.item._drive-more
+							span Далее за километр
+							b #{data.tariffs[0].price[2]} &#8381;
+					+e.H2.title Тариф "#{data.tariffs[0].name}"
+					p #{data.tariffs[0].text}
+			+town-regions-prices(data)
+			+services
+			+reviews
+			+advantages
