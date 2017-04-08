@@ -1,0 +1,21 @@
+mixin transfer-airport(obj)
+	+b.SECTION.transfer-airport
+		+e.inner
+			+e.HEADER.header
+				h2 Тарифы такси #{obj.tariff} на трансфер #{obj.from} в другие аэропорты.
+				p Фиксированная цена такси из аэропорта «#{obj.from}» в другие аэропорты.
+			+e.SECTION.item
+				h3 
+					span #{obj.from}
+					span #{obj.to[0]}
+				+e.B.price #{obj.price[0]}
+					span &#8381;
+				+e.A.link(href='#{obj.link[0]}') Заказать трансфер
+			+e.SECTION.item
+				h3 
+					span #{obj.from}
+					span #{obj.to[1]}
+				+e.B.price #{obj.price[1]}
+					span &#8381;
+				+e.A.link(href='#{obj.link[1]}') Заказать трансфер
+				

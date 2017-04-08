@@ -4,7 +4,7 @@ mixin town-regions-prices(data)
 			+e.H2.title #{data.tariffs[0].name} тарифы в Домодедово
 			p Фиксированная цена такси до аэропорта Домодедово
 			+e.UL.list
-			-for(var i = 0; i < data.regions.length; i++)
-				+e.LI.item #{data.regions[i].name}
-					span #{data.regions[i].price} &#8381;
+				-for(var i = 0; i < data.regions.length; i++)
+					+e.LI.item #{data.regions[i].name}
+						span #{data.regions[i].price} &#8381;
 			
