@@ -3,7 +3,7 @@ mixin tariffs(data)
 		+e.inner.center
 			+e.UL.list
 				each item, index in data.tariffs
-					+e.LI(class="__item #{i==0 ? '_active' : ''} tariff-toggle" data-name="#{item.name}") #{item.name}
+					+e.LI(class="__item #{index==0 ? '_active' : ''} tariff-toggle" data-name="#{item.name}") #{item.name}
 			+e.wrapper
 				- var tariffs = data.tariffs
 				- for(var i = 0; i < tariffs.length; i++)

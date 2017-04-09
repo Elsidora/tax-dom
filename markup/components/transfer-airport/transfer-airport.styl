@@ -4,9 +4,11 @@
 		display -ms-flex
 		display flex
 		flex-wrap wrap
-		justify-content: space-around;
+		justify-content: space-between;
+		padding-top 40px
 	&__header
 		flex-grow 1
+		padding-bottom 20px
 		h2
 			font-size 3rem
 			line-height 3.6rem
@@ -23,16 +25,18 @@
 		justify-content: space-between;
 		align-items: center;
 		align-content: space-between;
-		flex-basis 540px
+		flex-basis 48%
 		padding 20px
 		border-radius 5px
 		min-height 300px
 		&:first-of-type
 			background-image url(%=static=%content/domodevo-sheremetevo.jpg)
 			background-repeat no-repeat
+			background-size cover
 		&:last-of-type
 			background-image url(%=static=%content/domodedovo-vnukovo.jpg)
 			background-repeat no-repeat
+			background-size cover
 		h3
 			width 100%
 			color $white
