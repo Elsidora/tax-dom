@@ -25,3 +25,10 @@ m-blocks-justify()
 
 
 // You can add your own mixins here:
+mq(breakpoints)
+	conditions = ()
+	for breakpoint in breakpoints
+		push(conditions, media_queries[breakpoint])
+	conditions = join(", ", conditions)
+	@media conditions
+		{block}

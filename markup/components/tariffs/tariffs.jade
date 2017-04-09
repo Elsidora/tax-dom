@@ -1,6 +1,6 @@
 mixin tariffs(data)
 	+b.SECTION.tariffs
-		+e.inner
+		+e.inner.center
 			+e.UL.list
 				each item, index in data.tariffs
 					+e.LI(class="__item #{i==0 ? '_active' : ''} tariff-toggle" data-name="#{item.name}") #{item.name}
