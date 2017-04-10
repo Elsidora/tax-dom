@@ -1,19 +1,27 @@
 .phone
+	display -webkit-flex
+	display -ms-flex
+	display flex
+	justify-content: space-between;
+	align-items: center;
 	margin-left auto
-	padding-top 20px
 	&__btn
 		display inline-block
 		vertical-align top
-		margin-left 40px
-		padding-top 10px
-		padding-bottom 6px
 		padding-left 42px
 		padding-right 42px
-		border 3px solid #ff0
+		font-size 1.8rem
+		line-height 3.6rem
+		border 3px solid $form-btn
 		border-radius 20px
+		cursor pointer
+		&:hover
+			border-color $yellow
 	&__link
 		display inline-block
 		vertical-align top
-		padding-top 12px
-		font-size 1.8rem
+		margin-right 40px
+		font-size 1.6rem
+		line-height 3.6rem
 		color inherit
+			
