@@ -25,7 +25,10 @@ mixin main()
 							b #{data.tariffs[0].price[2]} &#8381;
 					+e.H2.title Тариф "#{data.tariffs[0].name}"
 					p #{data.tariffs[0].text}
-			+town-regions-prices(data)
+			+town-regions-prices(data,{
+				name:'econom',
+				nameRus:'Эконом'
+				})
 			+transfer-airport({tariff:'Эконом',
 												from:'Домодедово',
 												to:['Шереметьево','Внуково'],

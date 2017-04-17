@@ -1,7 +1,7 @@
 include ../../../node_modules/bemto.jade/bemto
 include ../../../node_modules/jade-injected/jade-injected
 include ../page/page
-include ../scripts/scripts
+//- include ../scripts/scripts
 
 doctype html
 html(lang='ru' class='no-js')
@@ -9,15 +9,15 @@ html(lang='ru' class='no-js')
 	+page
 		|%=symbols=%
 		block content
-		//- script(src='%=static=%js/separate-js/svg4everybody.min.js')
-		//- script svg4everybody();
-		//-
-		//- //- Main scripts. You can replace it, but I recommend you to leave it here
-		//- script(src='%=static=%js/main%=hash=%%=min=%.js')
+		script(src='%=static=%js/separate-js/svg4everybody.min.js')
+		script svg4everybody();
+		
+		//- Main scripts. You can replace it, but I recommend you to leave it here
+		script(src='%=static=%js/main%=hash=%%=min=%.js')
 		script(src='https://msk1.sedi.ru/api.js', type='text/javascript')
 		script(type='text/javascript').
 			window.SeDi({
 			//BootstrapTheme: "superhero", // http://bootswatch.com/
 			key: "B7B8FEEE-213A-4679-80A0-57A687DCF58D"
 			});
-		+scripts(['%=hash=%%=min=%.js'])
+		//- +scripts(['%=hash=%%=min=%.js'])
