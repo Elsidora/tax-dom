@@ -1,6 +1,7 @@
 import '../../components/navigation/navigation';
 import '../../components/tariffs/tariffs';
 import '../../components/reviews/slick.min';
+import '../../components/phone/phone';
 $(() => {
     $('.slick').slick({
         dots: true,

@@ -552,10 +552,10 @@ dropdowns in navigation.
 	padding: 16px 20px;
 	display: inline-block;
 	text-decoration: none;
-	float: left;
+	// float: left;
 	font-size: 13px;
 	color: #70798b;
-	background-color: #fdfdfd;
+	// background-color: #fdfdfd;
 	transition: color .3s, background .3s;
 }
 .nav-dropdown > li:hover > a,
@@ -640,12 +640,11 @@ horizontal dropdowns in navigation.
 	background-color: $sub-menu-bg;
 	border-top: solid 1px #f0f0f0;
 }
-.nav-dropdown-horizontal .center {
+.nav-dropdown-horizontal {
 	display -webkit-flex
 	display -ms-flex
 	display flex
-	width 1000px;
-	padding-left 79px
+	justify-content: center;
 }
 .nav-dropdown-horizontal .nav-dropdown-horizontal{
 	width: 100%;
@@ -668,16 +667,18 @@ horizontal dropdowns in navigation.
 .navigation-portrait .nav-dropdown-horizontal > li{
 	width: 100%;
 }
-.nav-dropdown-horizontal .center > li > a{
+.nav-dropdown-horizontal > li > a{
 	position: relative;
 	display block
-	min-height 50px
+	// min-height 50px
 	padding-right 25px
 	padding-left 25px
 	color inherit
-	line-height 50px
+	font-size 1.6rem
+	// line-height 3.6rem
+	// line-height 50px
 }
-.nav-dropdown-horizontal .center > li > a:hover{
+.nav-dropdown-horizontal > li > a:hover{
 	color white
 	background-color $main-menu-hover
 }

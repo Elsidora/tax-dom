@@ -24,4 +24,4 @@ mixin tariffs(data)
 										+e.LI.item._drive-more
 											span Далее за километр
 											b #{tariffs[i].price[2]} &#8381;
-									+e.A.link(href='#') Подробнее
+									+e.A.link(href='#{tariffs[i].url}') Подробнее
