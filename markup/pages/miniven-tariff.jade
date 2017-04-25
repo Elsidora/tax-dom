@@ -1,0 +1,13 @@
+extends ../components/layout-default/layout-default
+include ../components/header/header
+include ../components/content/tariffs/miniven
+include ../components/footer/footer
+
+block head
+	- var pageTitle = 'Тариф Минивэн';
+	- var pageDescription = 'my data';
+	- var pageKeywords = 'my data';
+block content
+	+header
+	+main
+	+footer

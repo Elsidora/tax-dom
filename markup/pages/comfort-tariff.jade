@@ -1,0 +1,13 @@
+extends ../components/layout-default/layout-default
+include ../components/header/header
+include ../components/content/tariffs/comfort
+include ../components/footer/footer
+
+block head
+	- var pageTitle = 'Тариф комфорт';
+	- var pageDescription = 'my data';
+	- var pageKeywords = 'my data';
+block content
+	+header
+	+main
+	+footer
