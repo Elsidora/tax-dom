@@ -1,11 +1,41 @@
 .tariff-page
+	background-image url(%=static=%general/bg2.jpg)
+	background-repeat: no-repeat
+	background-size cover
 	&__inner
 		min-height 700px
-		padding 40px
-		background-image url(%=static=%general/car-econom.png), url(%=static=%general/bg2.jpg)
-		background-repeat: no-repeat, no-repeat
-		background-size 730px 270px, cover
-		background-position 50% 90%
+		padding-top 40px
+		&_econom
+			background-image url(%=static=%content/cars/econom.png)
+			background-repeat: no-repeat
+			background-size 730px 270px
+			background-position center bottom
+		&_comfort
+			background-image url(%=static=%content/cars/comfort.png)
+			background-repeat: no-repeat
+			background-size 730px 270px
+			background-position center bottom
+		&_universal
+			background-image url(%=static=%content/cars/universal.png)
+			background-repeat: no-repeat
+			background-size 730px 270px
+			background-position center bottom
+		&_biznes
+			background-image url(%=static=%content/cars/business.png)
+			background-repeat: no-repeat
+			background-size 730px 270px
+			background-position center bottom
+		&_miniven
+			background-image url(%=static=%content/cars/miniven.png)
+			background-repeat: no-repeat
+			background-size 730px 270px
+			background-position center bottom
+		&_microbus
+			background-image url(%=static=%content/cars/microbus.png)
+			background-repeat: no-repeat
+			background-size 730px 270px
+			background-position center bottom
+		
 	&__list
 		display -webkit-flex
 		display -ms-flex
