@@ -1,12 +1,12 @@
 .tariffs
+	background-image url(%=static=%general/bg2.jpg)
+	background-repeat: no-repeat
+	background-size 100% auto contain
 	&__inner
 		min-height 700px
 		// padding 40px
 		padding-top 40px
-		padding-bottom 40px
-		background-image url(%=static=%general/bg2.jpg)
-		background-repeat: no-repeat
-		background-size cover
+		// padding-bottom 40px
 	&__list
 		display -webkit-flex
 		display -ms-flex
@@ -38,24 +38,51 @@
 			border-right none
 	&__wrapper
 		position relative
+		display -webkit-flex
+		display -ms-flex
+		display flex
+		height 555px
 //block tariff
 .tariff-item
 	display none
-	position absolute
-	left 0
-	top 0
+	opacity 0
+	// position absolute
+	// left 0
+	// top 0
 	&_econom
-		background-image url(%=static=%general/car-econom.png)
-		background-size 730px 270px
+		background-image url(%=static=%content/cars/econom.png)
+		// background-size 700px 316px
 		background-repeat no-repeat
 		background-position left bottom
-	// &_comfort
-	// 	background-image url(%=static=%content/comfort.png)
-	// 	background-size 730px 270px
-	// 	background-repeat no-repeat
-	// 	background-position left bottom
+	&_comfort
+		background-image url(%=static=%content/cars/comfort.png)
+		// background-size 700px 316px
+		background-repeat no-repeat
+		background-position left bottom
+	&_universal
+		background-image url(%=static=%content/cars/universal.png)
+		// background-size 700px 316px
+		background-repeat no-repeat
+		background-position left bottom
+	&_biznes
+		background-image url(%=static=%content/cars/business.png)
+		// background-size 700px 316px
+		background-repeat no-repeat
+		background-position left bottom
+	&_miniven
+		background-image url(%=static=%content/cars/miniven.png)
+		// background-size 700px 316px
+		background-repeat no-repeat
+		background-position left bottom
+	&_microbus
+		background-image url(%=static=%content/cars/microbus.png)
+		background-size 850px 330px
+		background-repeat no-repeat
+		background-position left bottom
 	&_active
 		display block
+		opacity 1
+		transition opacity 2s
 	&__inner
 		display -webkit-flex
 		display -ms-flex
@@ -67,6 +94,8 @@
 		display -ms-flex
 		display flex
 		flex-direction column
+		padding-top 55px
+		padding-left 100px
 	&__title
 		margin-bottom 30px
 		color $white
@@ -79,7 +108,8 @@
 		line-height 2.6rem
 		font-weight 300
 	&__list
-		margin-bottom 160px
+		margin-bottom 100px
+		margin-top auto
 	&__item
 		padding-left 140px
 		padding-bottom 30px

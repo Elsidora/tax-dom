@@ -8,7 +8,7 @@ $(() => {
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 4,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 5000
     });
 });
