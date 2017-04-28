@@ -1,6 +1,13 @@
 .page-header
 	position relative
+	z-index 1000
 	&__inner
 		display -webkit-flex
 		display -ms-flex
 		display flex
+		position fixed
+		left calc(50% - 640px)
+		top 0
+		width 100%
+		background-color $white
+		box-shadow:  0 15px 5px -13px rgba(0,0,0,.2);
