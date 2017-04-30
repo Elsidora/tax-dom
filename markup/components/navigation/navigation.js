@@ -1,10 +1,10 @@
-(function($, window, document, undefined) {
+(function ($, window, document, undefined) {
 
-    $.navigation = function(element, options) {
+    $.navigation = function (element, options) {
 
         var defaults = {
             responsive: true,
-            mobileBreakpoint: 767,
+            mobileBreakpoint: 425,
             showDuration: 300,
             hideDuration: 300,
             showDelayDuration: 0,
@@ -23,11 +23,11 @@
             offCanvasCloseButton: true,
             animationOnShow: '',
             animationOnHide: '',
-            onInit: function() {},
-            onLandscape: function() {},
-            onPortrait: function() {},
-            onShowOffCanvas: function() {},
-            onHideOffCanvas: function() {}
+            onInit: function () {},
+            onLandscape: function () {},
+            onPortrait: function () {},
+            onShowOffCanvas: function () {},
+            onHideOffCanvas: function () {}
         };
 
         var plugin = this,
@@ -44,7 +44,7 @@
             $(element).find('.nav-search').find('form').prepend('<span class=\'nav-search-close-button\' tabindex=\'0\'>&#10005;</span>');
         }
 
-        plugin.init = function() {
+        plugin.init = function () {
             plugin.settings = $.extend({}, defaults, options);
 
             if (plugin.settings.offCanvasCloseButton) {
@@ -66,7 +66,7 @@
                 $(element).addClass('navigation-fixed');
             }
 
-            $(element).find('.nav-toggle').on('click touchstart', function(e) {
+            $(element).find('.nav-toggle').on('click touchstart', function (e) {
                 e.stopPropagation();
                 e.preventDefault();
                 plugin.showOffcanvas();
@@ -75,14 +75,14 @@
                 }
             });
 
-            $(element).find('.nav-menus-wrapper-close-button').on('click touchstart', function() {
+            $(element).find('.nav-menus-wrapper-close-button').on('click touchstart', function () {
                 plugin.hideOffcanvas();
                 if (options !== undefined) {
                     plugin.callback('onHideOffCanvas');
                 }
             });
 
-            $(element).find('.nav-search-button, .nav-search-close-button').on('click touchstart keydown', function(e) {
+            $(element).find('.nav-search-button, .nav-search-close-button').on('click touchstart keydown', function (e) {
                 e.stopPropagation();
                 e.preventDefault();
                 var code = e.keyCode || e.which;
@@ -99,7 +99,7 @@
                 activateTabs();
             }
 
-            $(window).resize(function() {
+            $(window).resize(function () {
                 plugin.initNavigationMode(windowWidth());
                 fixSubmenuRightPosition();
                 if (plugin.settings.hiddenOnMobile) {
@@ -119,14 +119,14 @@
         };
 
         // reset submenus
-        var resetSubmenus = function() {
+        var resetSubmenus = function () {
             $(element).find('.nav-submenu').hide(0);
             $(element).find('li').removeClass('focus');
         };
 
         // check the existence of submenus/add indicators to them
-        var checkSubmenus = function() {
-            $(element).find('li').each(function() {
+        var checkSubmenus = function () {
+            $(element).find('li').each(function () {
                 if ($(this).children('.nav-dropdown,.megamenu-panel').length > 0) {
                     $(this).children('.nav-dropdown,.megamenu-panel').addClass('nav-submenu');
                     if (plugin.settings.submenuIndicator) {
@@ -141,7 +141,7 @@
         };
 
         // hide navbar on portrait mode
-        var hideNavbarPortrait = function() {
+        var hideNavbarPortrait = function () {
             if ($(element).hasClass('navigation-portrait')) {
                 $(element).addClass('navigation-hidden');
             } else {
@@ -150,7 +150,7 @@
         };
 
         // show a submenu
-        plugin.showSubmenu = function(parentItem, submenuEffect) {
+        plugin.showSubmenu = function (parentItem, submenuEffect) {
             if (windowWidth() > plugin.settings.mobileBreakpoint) {
                 $(element).find('.nav-search').find('form').fadeOut();
             }
@@ -173,7 +173,7 @@
         };
 
         // hide a submenu
-        plugin.hideSubmenu = function(parentItem, submenuEffect) {
+        plugin.hideSubmenu = function (parentItem, submenuEffect) {
             if (submenuEffect == 'fade') {
                 $(parentItem).find('.nav-submenu')
                     .stop(true, true)
@@ -193,31 +193,31 @@
         };
 
         // show the overlay panel
-        var showOverlay = function() {
+        var showOverlay = function () {
             $('body').addClass('no-scroll');
             if (plugin.settings.overlay) {
                 $(element).append('<div class=\'nav-overlay-panel\'></div>');
                 $(element).find('.nav-overlay-panel')
                     .css('background-color', plugin.settings.overlayColor)
                     .fadeIn(300)
-                    .on('click touchstart', function(e) {
+                    .on('click touchstart', function (e) {
                         plugin.hideOffcanvas();
                     });
             }
         };
 
         // hide the overlay panel
-        var hideOverlay = function() {
+        var hideOverlay = function () {
             $('body').removeClass('no-scroll');
             if (plugin.settings.overlay) {
-                $(element).find('.nav-overlay-panel').fadeOut(400, function() {
+                $(element).find('.nav-overlay-panel').fadeOut(400, function () {
                     $(this).remove();
                 });
             }
         };
 
         // show offcanvas
-        plugin.showOffcanvas = function() {
+        plugin.showOffcanvas = function () {
             showOverlay();
             if (plugin.settings.offCanvasSide == 'left') {
                 $(element).find('.nav-menus-wrapper').css('transition-property', 'left').addClass('nav-menus-wrapper-open');
@@ -227,9 +227,9 @@
         };
 
         // hide offcanvas
-        plugin.hideOffcanvas = function() {
+        plugin.hideOffcanvas = function () {
             $(element).find('.nav-menus-wrapper').removeClass('nav-menus-wrapper-open')
-                .on('webkitTransitionEnd moztransitionend transitionend oTransitionEnd', function() {
+                .on('webkitTransitionEnd moztransitionend transitionend oTransitionEnd', function () {
                     $(element).find('.nav-menus-wrapper')
                         .css('transition-property', 'none')
                         .off();
@@ -238,7 +238,7 @@
         };
 
         // toggle offcanvas
-        plugin.toggleOffcanvas = function() {
+        plugin.toggleOffcanvas = function () {
             if (windowWidth() <= plugin.settings.mobileBreakpoint) {
                 if ($(element).find('.nav-menus-wrapper').hasClass('nav-menus-wrapper-open')) {
                     plugin.hideOffcanvas();
@@ -255,7 +255,7 @@
         };
 
         // show/hide the search form
-        plugin.toggleSearch = function() {
+        plugin.toggleSearch = function () {
             if ($(element).find('.nav-search').find('form').css('display') == 'none') {
                 $(element).find('.nav-search').find('form').fadeIn(200);
                 $(element).find('.nav-search').find('input').focus();
@@ -266,7 +266,7 @@
         };
 
         // set the navigation mode and others configs
-        plugin.initNavigationMode = function(screenWidth) {
+        plugin.initNavigationMode = function (screenWidth) {
             if (plugin.settings.responsive) {
                 if (screenWidth <= plugin.settings.mobileBreakpoint && bigScreenFlag > plugin.settings.mobileBreakpoint) {
                     $(element).addClass('navigation-portrait').removeClass('navigation-landscape');
@@ -296,8 +296,8 @@
         };
 
         // hide submenus/form when click/touch outside
-        var goOut = function() {
-            $('html').on('click.body touchstart.body', function(e) {
+        var goOut = function () {
+            $('html').on('click.body touchstart.body', function (e) {
                 if ($(e.target).closest('.navigation').length === 0) {
                     $(element).find('.nav-submenu').fadeOut();
                     $(element).find('.focus').removeClass('focus');
@@ -307,12 +307,12 @@
         };
 
         // return the window's width
-        var windowWidth = function() {
+        var windowWidth = function () {
             return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
         };
 
         // unbind events
-        var unbindEvents = function() {
+        var unbindEvents = function () {
             $(element).find('.nav-menu').find('li, a')
                 .off(clickTouchEvents)
                 .off(hoverShowEvents)
@@ -320,10 +320,10 @@
         };
 
         // fix submenu right position
-        var fixSubmenuRightPosition = function() {
+        var fixSubmenuRightPosition = function () {
             if (windowWidth() > plugin.settings.mobileBreakpoint) {
                 var navWidth = $(element).outerWidth(true);
-                $(element).find('.nav-menu').children('li').children('.nav-submenu').each(function() {
+                $(element).find('.nav-menu').children('li').children('.nav-submenu').each(function () {
                     if ($(this).parent().position().left + $(this).outerWidth() > navWidth) {
                         $(this).css('right', 0);
                     } else {
@@ -334,11 +334,11 @@
         };
 
         // activate the tabs
-        var activateTabs = function() {
+        var activateTabs = function () {
             function initTabs(tabs) {
                 var navs = $(tabs).children('.megamenu-tabs-nav').children('li');
                 var panes = $(tabs).children('.megamenu-tabs-pane');
-                $(navs).on('click.tabs touchstart.tabs', function(e) {
+                $(navs).on('click.tabs touchstart.tabs', function (e) {
                     e.stopPropagation();
                     e.preventDefault();
                     $(navs).removeClass('active');
@@ -357,11 +357,11 @@
         };
 
         // set the landscape mode
-        var landscapeMode = function() {
+        var landscapeMode = function () {
             unbindEvents();
             resetSubmenus();
             if (navigator.userAgent.match(/Mobi/i) || navigator.maxTouchPoints > 0 || plugin.settings.submenuTrigger == 'click') {
-                $(element).find('.nav-menu, .nav-dropdown').children('li').children('a').on(clickTouchEvents, function(e) {
+                $(element).find('.nav-menu, .nav-dropdown').children('li').children('a').on(clickTouchEvents, function (e) {
                     plugin.hideSubmenu($(this).parent('li').siblings('li'), plugin.settings.effect);
                     $(this).closest('.nav-menu').siblings('.nav-menu').find('.nav-submenu').fadeOut(plugin.settings.hideDuration);
                     if ($(this).siblings('.nav-submenu').length > 0) {
@@ -386,10 +386,10 @@
                     }
                 });
             } else {
-                $(element).find('.nav-menu').find('li').on(hoverShowEvents, function() {
+                $(element).find('.nav-menu').find('li').on(hoverShowEvents, function () {
                     plugin.showSubmenu(this, plugin.settings.effect);
                     fixSubmenuRightPosition();
-                }).on(hoverHideEvents, function() {
+                }).on(hoverHideEvents, function () {
                     plugin.hideSubmenu(this, plugin.settings.effect);
                 });
             }
@@ -399,7 +399,7 @@
         };
 
         // set the portrait mode
-        var portraitMode = function() {
+        var portraitMode = function () {
             unbindEvents();
             resetSubmenus();
             if (plugin.settings.visibleSubmenusOnMobile) {
@@ -408,7 +408,7 @@
                 resetSubmenus();
                 $(element).find('.submenu-indicator').removeClass('submenu-indicator-up');
                 if (plugin.settings.submenuIndicator) {
-                    $(element).find('.submenu-indicator').on(clickTouchEvents, function(e) {
+                    $(element).find('.submenu-indicator').on(clickTouchEvents, function (e) {
                         e.stopPropagation();
                         e.preventDefault();
                         plugin.hideSubmenu($(this).parent('a').parent('li').siblings('li'), 'slide');
@@ -430,7 +430,7 @@
             }
         };
 
-        plugin.callback = function(func) {
+        plugin.callback = function (func) {
             if (options[func] !== undefined) {
                 options[func].call(element);
             }
@@ -440,8 +440,8 @@
 
     };
 
-    $.fn.navigation = function(options) {
-        return this.each(function() {
+    $.fn.navigation = function (options) {
+        return this.each(function () {
             if (undefined === $(this).data('navigation')) {
                 var plugin = new $.navigation(this, options);
                 $(this).data('navigation', plugin);
@@ -450,6 +450,3 @@
     };
 
 })(jQuery, window, document);
-$(document).ready(function() {
-    $('#navigation').navigation();
-});
