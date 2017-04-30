@@ -4,9 +4,12 @@ window.onload = function (e) {
     function formInputFocus() {
         const formField = document.querySelector('#sedi-orderform2-address-from');
         const formFieldTo = document.querySelector('#sedi-orderform2-address-to');
-        if (formField && formFieldTo) {
+        const attr = this.getAttribute('data-name');
+        if ( attr === 'transfer') {
             formField.value = 'Аэропорт Домодедово';
             formFieldTo.focus();
+        } else {
+            formField.focus();
         }
     }
     phoneBtn.addEventListener('click', formInputFocus);

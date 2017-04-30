@@ -1,18 +1,20 @@
 .tariffs
-	background-image url(%=static=%general/bg2.jpg)
+	background-image url(%=static=%general/bg2_650.jpg)
 	background-repeat: no-repeat
-	background-size 100% auto contain
+	background-size cover
 	&__inner
-		min-height 700px
-		// padding 40px
+		display -webkit-flex
+		display -ms-flex
+		display flex
+		flex-direction column
+		justify-content: space-between;
+		min-height 650px
 		padding-top 40px
-		// padding-bottom 40px
 	&__list
 		display -webkit-flex
 		display -ms-flex
 		display flex
-		// justify-content: center;
-		margin-bottom 60px
+		flex-wrap wrap
 		border 3px solid $white
 		border-radius 30px
 		overflow: hidden;
@@ -39,17 +41,11 @@
 			border-right none
 	&__wrapper
 		position relative
-		display -webkit-flex
-		display -ms-flex
-		display flex
-		height 555px
+		flex 0 0 75%
 //block tariff
 .tariff-item
 	display none
 	opacity 0
-	// position absolute
-	// left 0
-	// top 0
 	&_econom
 		background-image url(%=static=%content/cars/econom.png)
 		// background-size 700px 316px
@@ -83,20 +79,22 @@
 	&_active
 		display block
 		opacity 1
-		transition opacity 2s
 	&__inner
 		display -webkit-flex
 		display -ms-flex
 		display flex
+		flex-wrap wrap
+		justify-content: space-between;
+		min-height 520px
 	&__left-col
-		width 65%
+		flex 0 0 60%
 	&__right-col
 		display -webkit-flex
 		display -ms-flex
 		display flex
 		flex-direction column
-		padding-top 55px
-		padding-left 100px
+		justify-content: space-between;
+		padding-right 50px
 	&__title
 		margin-bottom 30px
 		color $white
@@ -108,9 +106,6 @@
 		font-size 1.6rem
 		line-height 2.6rem
 		font-weight 300
-	&__list
-		margin-bottom 100px
-		margin-top auto
 	&__item
 		padding-left 140px
 		padding-bottom 30px
@@ -133,10 +128,10 @@
 		&_drive-more
 			background-image url(%=static=%minified-svg/icon2-3.svg)
 	&__link
-		align-self: flex-end;
+		align-self: center
 		display inline-block
 		vertical-align top
-		margin-bottom 20px
+		margin-bottom 50px
 		padding-left 58px
 		padding-right 58px
 		color $white
