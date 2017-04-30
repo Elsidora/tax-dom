@@ -26,6 +26,7 @@
 			color $white
 			font-size 3.6rem
 			line-height 7.2rem
+			text-align center
 		span
 			color $yellow
 		p
@@ -33,16 +34,22 @@
 			padding-left 35px
 			color $white
 			line-height 3.6rem
+			text-align center
 	&__list
 		display -webkit-flex
 		display -ms-flex
 		display flex
+		align-self: center;
 	&__item
+		min-width 90px
 		margin-right 50px
 		padding-top 75px
 		color $white
 		font-size 1.6rem
 		line-height 3.2rem
+		text-align center
+		&:last-child
+			margin-right 0
 		&_order
 			background-image url(%=static=%minified-svg/icon1-3.svg)
 			background-size 60px 60px
