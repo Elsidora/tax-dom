@@ -41,11 +41,10 @@
 			border-right none
 	&__wrapper
 		position relative
-		flex 0 0 75%
+		// flex 0 0 75%
 //block tariff
 .tariff-item
 	display none
-	opacity 0
 	&_econom
 		background-image url(%=static=%content/cars/econom.png)
 		// background-size 700px 316px
@@ -78,7 +77,6 @@
 		background-position left bottom
 	&_active
 		display block
-		opacity 1
 	&__inner
 		display -webkit-flex
 		display -ms-flex
@@ -87,7 +85,7 @@
 		justify-content: space-between;
 		min-height 520px
 	&__left-col
-		flex 0 0 60%
+		width 60%
 	&__right-col
 		display -webkit-flex
 		display -ms-flex
@@ -95,6 +93,8 @@
 		flex-direction column
 		justify-content: space-between;
 		padding-right 50px
+		@media (max-width: 825px)
+			padding-right 10px
 	&__title
 		margin-bottom 30px
 		color $white
@@ -116,6 +116,9 @@
 		background-size 60px 60px
 		background-repeat no-repeat
 		background-position 40px 5%
+		@media (max-width: 900px)
+			padding-left 100px
+			background-position left 5%
 		b
 			display block
 			font-size 2.4rem
@@ -140,5 +143,7 @@
 		font-weight 100
 		border 3px solid $yellow
 		border-radius 20px
+		@media (max-width: 768px)
+			margin-bottom 150px
 		&:hover
 			border 3px solid $white

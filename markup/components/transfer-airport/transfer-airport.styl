@@ -25,14 +25,19 @@
 		justify-content: space-between;
 		align-items: center;
 		align-content: space-between;
+		min-height 300px
 		flex-basis 48%
 		padding 20px
 		border-radius 5px
-		min-height 300px
+		@media (max-width: 768px)
+			min-height 250px
+			flex-basis: 100%
 		&:first-of-type
 			background-image url(%=static=%content/domodevo-sheremetevo.jpg)
 			background-repeat no-repeat
 			background-size cover
+			@media (max-width: 768px)
+				margin-bottom 10px
 		&:last-of-type
 			background-image url(%=static=%content/domodedovo-vnukovo.jpg)
 			background-repeat no-repeat

@@ -656,6 +656,9 @@ horizontal dropdowns in navigation.
 	display -ms-flex
 	display flex
 	justify-content: center;
+	@media (max-width: 768px){
+		display block
+	}
 }
 .nav-dropdown-horizontal .nav-dropdown-horizontal{
 	width: 100%;
@@ -673,7 +676,7 @@ horizontal dropdowns in navigation.
 	position: static;
 }
 .nav-dropdown-horizontal li:not(:last-child){
-	margin-right 25px
+	margin-right 0
 }
 .navigation-portrait .nav-dropdown-horizontal > li{
 	width: 100%;

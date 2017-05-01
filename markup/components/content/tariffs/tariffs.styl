@@ -1,10 +1,16 @@
 .tariff-page
-	background-image url(%=static=%general/bg2.jpg)
+	background-image url(%=static=%general/bg2_650.jpg)
 	background-repeat: no-repeat
 	background-size cover
 	&__inner
 		min-height 700px
 		padding-top 40px
+		@media (max-width: 768px)
+			min-height 650px
+			display -webkit-flex
+			display -ms-flex
+			display flex
+			flex-direction column
 		&_econom
 			background-image url(%=static=%content/cars/econom.png)
 			background-repeat: no-repeat
@@ -41,6 +47,8 @@
 		display -ms-flex
 		display flex
 		justify-content: space-between;
+		@media (max-width: 768px)
+			order 2
 	&__item
 		padding-left 100px
 		padding-bottom 30px
@@ -68,9 +76,14 @@
 		font-size 3rem
 		line-height 3.6rem
 		font-weight 300
+		@media (max-width: 768px)
+			margin-bottom 15px
 	p
 		width 70%
 		color $white
 		font-size 1.6rem
 		line-height 2.6rem
 		font-weight 300
+		@media (max-width: 768px)
+			width 100%
+			margin-bottom 100px
