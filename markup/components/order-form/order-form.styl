@@ -3,6 +3,10 @@
 	// padding-bottom 15px
 	background rgba(255,255,255,.8)
 	border-radius 10px
+	animation: formAnimate 2s ease-in
+	animation-fill-mode: both;
+	animation-iteration-count: 1
+	animation-delay 3s
 	@media (max-width: 768px)
 		margin-left 0
 		padding-left 0
@@ -112,3 +116,32 @@ div#sedi-orderform2 .sedi-orderform2-withvalue-changeuser
 div#sedi-orderform2-customer-phone input[type='tel']
 	border-radius: 20px;
 	padding: 0.8em;
+
+@keyframes formAnimate
+	0% 
+		display none
+		opacity 0
+	1%
+		display block
+		opacity 0
+	10%
+		opacity .1
+	20%
+		opacity .2
+	30%
+		opacity .3
+	40%
+		opacity .4
+	50%
+		opacity .5
+	60%
+		opacity .6
+	70%
+		opacity .7
+	80%
+		opacity .8
+	90%
+		opacity .9
+	100%
+		opacity 1
+		
