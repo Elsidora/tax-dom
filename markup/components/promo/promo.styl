@@ -36,6 +36,9 @@
 		@media (max-width: 768px)
 			padding-top 20px
 			width 100%
+		@media (max-width: 480px)
+			padding-top 10px
+			padding-left 0
 		h1
 			padding-left 35px
 			padding-top 100px
@@ -47,6 +50,7 @@
 				padding-top 0
 			@media (max-width: 768px)
 				padding-left 0
+				line-height 5rem
 		span
 			color $yellow
 		p
@@ -59,6 +63,10 @@
 				margin-bottom 10px
 			@media (max-width: 768px)
 				margin-bottom 0
+			@media (max-width: 480px)
+				padding-left 0
+				padding-bottom 5px
+				line-height 2.5rem
 	&__list
 		display -webkit-flex
 		display -ms-flex
@@ -76,28 +84,23 @@
 		font-size 1.6rem
 		line-height 3.2rem
 		text-align center
+		background-size 60px 60px
+		background-repeat no-repeat
+		background-position 50% 5%
 		@media (max-width: 975px)
 			margin-right 30px
 		@media (max-width: 975px)
 			margin-right 10px
 		@media (max-width: 768px)
-			margin-right 30px
+			margin-right 10px
+			background-size 50px 50px
+			background-position 50% 15%
+			line-height 2rem
 		&:last-child
 			margin-right 0
 		&_order
 			background-image url(%=static=%minified-svg/icon1-3.svg)
-			background-size 60px 60px
-			background-repeat no-repeat
-			background-position 50% 5%
-		
 		&_sms
 			background-image url(%=static=%minified-svg/icon1-1.svg)
-			background-size 60px 60px
-			background-repeat no-repeat
-			background-position 50% 5%
-		
 		&_24-hours
 			background-image url(%=static=%minified-svg/icon1-2.svg)
-			background-size 60px 60px
-			background-repeat no-repeat
-			background-position 50% 5%

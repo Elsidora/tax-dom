@@ -1,12 +1,16 @@
 .services
 	&__inner
 		padding-top 70px
+		@media (max-width: 480px)
+			padding-top 30px
 	&__title
 		margin-bottom 50px
 		color $black
 		font-size 3rem
 		line-height 3.6rem
 		font-weight 300
+		@media (max-width: 480px)
+			margin-bottom 20px
 	&__list
 		display -webkit-flex
 		display -ms-flex
@@ -20,7 +24,7 @@
 		display -ms-flex
 		display flex
 		align-items: center;
-		width 45%
+		flex-basis 45%
 		margin-bottom 15px
 		padding-left 90px
 		min-height 60px
@@ -31,8 +35,16 @@
 		background-size 50px 50px
 		background-repeat no-repeat
 		background-position left 5%
+		@media (max-width: 480px)
+			flex-basis 100%
+			margin-bottom 5px
+			padding-left 60px
+			line-height 1.6rem
+			background-size 40px 40px
 		&:nth-child(odd)
 			padding-right 20px
+			@media (max-width: 480px)
+				padding-right 0
 		&_tablet
 			background-image url(%=static=%minified-svg/icon3-1.svg)
 		&_car-smoke

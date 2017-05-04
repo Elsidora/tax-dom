@@ -6,11 +6,13 @@
 	animation: formAnimate 2s ease-in
 	animation-fill-mode: both;
 	animation-iteration-count: 1
-	animation-delay 3s
+	animation-delay 1.5axis
 	@media (max-width: 768px)
 		margin-left 0
 		padding-left 0
 		padding-bottom 0
+	@media (max-width: 480px)
+		padding-top 40px
 div#sedi-orderform2-fields
 	border-radius 20px
 	box-shadow 0 10px 9px 1px rgba(0, 0, 0, 0.15)
@@ -43,6 +45,8 @@ div#sedi-orderform2 .sedi-orderform2-section.sedi-orderform2-section-opened .sed
 	top 57%
 div#sedi-orderform2 .sedi-orderform2-row-part-third:first-child
 	margin-right 7px
+	@media (max-width: 480px)
+		margin-right 2px
 div#sedi-orderform2 INPUT[type='text'],
 div#sedi-orderform2 TEXTAREA
 	border-radius 20px

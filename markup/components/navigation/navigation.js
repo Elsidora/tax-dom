@@ -4,7 +4,7 @@
 
         var defaults = {
             responsive: true,
-            mobileBreakpoint: 425,
+            mobileBreakpoint: 480,
             showDuration: 300,
             hideDuration: 300,
             showDelayDuration: 0,
