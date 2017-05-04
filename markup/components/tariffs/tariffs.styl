@@ -61,31 +61,32 @@
 	&_econom
 		background-image url(%=static=%content/cars/econom.png)
 		@media (max-width: 480px)
-			background-size 465px 150px
+			background-size 100% 28%
 	&_comfort
 		background-image url(%=static=%content/cars/comfort.png)
-		@media (max-width: 480px)
-			background-size 510px 220px
+		&[data-name]
+			@media (max-width: 480px)
+				background-size 100% 40%
 	&_universal
 		background-image url(%=static=%content/cars/universal.png)
 		@media (max-width: 480px)
-			background-size 465px 150px
+			background-size 100% 28%
 	&_biznes
 		background-image url(%=static=%content/cars/business.png)
 		@media (max-width: 480px)
-			background-size 510px 220px
+			background-size 100% 40%
 	&_miniven
 		background-image url(%=static=%content/cars/miniven.png)
 		&[data-name]
 			@media (max-width: 480px)
-				background-size 355px 150px
+				background-size 90% 29%
 				background-position center bottom
 	&_microbus
 		background-image url(%=static=%content/cars/microbus.png)
 		background-size 850px 330px
 		&[data-name]
 			@media (max-width: 480px)
-				background-size 420px 150px
+				background-size 100% 30%
 				background-position center bottom
 	&_active
 		display block
