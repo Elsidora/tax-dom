@@ -36,16 +36,23 @@
 		@media (max-width: 768px)
 			min-height 250px
 			flex-basis: 100%
+		@media (max-width: 414px)
+			min-height 200px
 		&:first-of-type
 			background-image url(%=static=%content/domodevo-sheremetevo.jpg)
 			background-repeat no-repeat
 			background-size cover
 			@media (max-width: 768px)
 				margin-bottom 10px
+			@media (max-width: 414px)
+				background-size 410px 200px
+			
 		&:last-of-type
 			background-image url(%=static=%content/domodedovo-vnukovo.jpg)
 			background-repeat no-repeat
 			background-size cover
+			@media (max-width: 414px)
+				background-size 410px 200px
 		h3
 			width 100%
 			color $white
