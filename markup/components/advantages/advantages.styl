@@ -2,6 +2,8 @@
 	&__inner
 		padding-top 30px
 		margin-bottom 70px
+		@media (max-width: 414px)
+			padding-top 0
 	&__list
 		display -webkit-flex
 		display -ms-flex
@@ -21,6 +23,8 @@
 		@media (max-width: 768px)
 			background-size 42px 42px
 			flex-basis 200px
+		@media (max-width: 414px)
+			flex-basis 150px
 			
 		&_price
 			background-image: url(%=static=%minified-svg/icon4-1.svg);

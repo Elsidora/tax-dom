@@ -8,10 +8,15 @@
 		@media (max-width: 480px)
 			width 40px
 			height 40px
+		@media (max-width: 414px)
+			width 35px
+			height 35px
 		&:hover
 			transform scale(1.1)
 		&:not(:last-child)
 			margin-right 25px
+			@media (max-width: 414px)
+				margin-right 20px
 		&_vkontakt
 			background-image: url(%=static=%minified-svg/vk.svg);
 		&_facebook
