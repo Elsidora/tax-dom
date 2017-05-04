@@ -19,6 +19,10 @@
 		border-radius 30px
 		overflow: hidden;
 		color white
+		@media (max-width: 480px)
+			border 2px solid $white
+			border-radius 5px
+			margin-bottom 10px
 	&__item
 		flex-grow 1
 		color $dark
@@ -30,6 +34,12 @@
 		cursor pointer
 		transition background-color .4s ease
 		text-align center
+		@media (max-width: 480px)
+			&:not(:last-child)
+				border-bottom 1px solid $black
+				border-right 1px solid $black
+			&:nth-child(5)
+				border-right none
 		&:hover,
 		&_active
 			color $white
@@ -45,36 +55,38 @@
 //block tariff
 .tariff-item
 	display none
+	&[data-name]
+		background-repeat no-repeat
+		background-position left bottom
 	&_econom
 		background-image url(%=static=%content/cars/econom.png)
-		// background-size 700px 316px
-		background-repeat no-repeat
-		background-position left bottom
+		@media (max-width: 480px)
+			background-size 465px 150px
 	&_comfort
 		background-image url(%=static=%content/cars/comfort.png)
-		// background-size 700px 316px
-		background-repeat no-repeat
-		background-position left bottom
+		@media (max-width: 480px)
+			background-size 510px 220px
 	&_universal
 		background-image url(%=static=%content/cars/universal.png)
-		// background-size 700px 316px
-		background-repeat no-repeat
-		background-position left bottom
+		@media (max-width: 480px)
+			background-size 465px 150px
 	&_biznes
 		background-image url(%=static=%content/cars/business.png)
-		// background-size 700px 316px
-		background-repeat no-repeat
-		background-position left bottom
+		@media (max-width: 480px)
+			background-size 510px 220px
 	&_miniven
 		background-image url(%=static=%content/cars/miniven.png)
-		// background-size 700px 316px
-		background-repeat no-repeat
-		background-position left bottom
+		&[data-name]
+			@media (max-width: 480px)
+				background-size 355px 150px
+				background-position center bottom
 	&_microbus
 		background-image url(%=static=%content/cars/microbus.png)
 		background-size 850px 330px
-		background-repeat no-repeat
-		background-position left bottom
+		&[data-name]
+			@media (max-width: 480px)
+				background-size 420px 150px
+				background-position center bottom
 	&_active
 		display block
 	&__inner
@@ -86,6 +98,8 @@
 		min-height 520px
 	&__left-col
 		width 60%
+		@media (max-width: 480px)
+			width 100%
 	&__right-col
 		display -webkit-flex
 		display -ms-flex
@@ -95,17 +109,31 @@
 		padding-right 50px
 		@media (max-width: 825px)
 			padding-right 10px
+		@media (max-width: 480px)
+			padding-right 0
+			flex-direction row
+			flex-wrap wrap
 	&__title
 		margin-bottom 30px
 		color $white
 		font-size 3rem
 		line-height 3.6rem
 		font-weight 300
+		@media (max-width: 480px)
+			margin-bottom 15px
+			text-align center
 	p
 		color $white
 		font-size 1.6rem
 		line-height 2.6rem
 		font-weight 300
+	&__list
+		@media (max-width: 480px)
+			display -webkit-flex
+			display -ms-flex
+			display flex
+			justify-content: space-between;
+			flex-basis 100%
 	&__item
 		padding-left 140px
 		padding-bottom 30px
@@ -119,6 +147,15 @@
 		@media (max-width: 900px)
 			padding-left 100px
 			background-position left 5%
+		@media (max-width: 480px)
+			flex-basis 150px
+			padding-left 0
+			padding-bottom 0
+			padding-top 65px
+			line-height 2rem
+			background-size 50px 50px
+			background-position center top
+			text-align center
 		b
 			display block
 			font-size 2.4rem
@@ -145,5 +182,10 @@
 		border-radius 20px
 		@media (max-width: 768px)
 			margin-bottom 150px
+		@media (max-width: 480px)
+			margin-left calc(50% - 106px)
+			margin-bottom 160px
+			line-height 3.0rem
+			
 		&:hover
 			border 3px solid $white
