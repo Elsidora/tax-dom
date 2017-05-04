@@ -19,6 +19,11 @@ ul
 ul,li,p,h1,h2,h3
 	margin 0
 	padding 0
+.heading
+	&_h1,
+	&_h2,
+	&_h3,
+		display block
 .page
 	display -webkit-flex
 	display -ms-flex
@@ -42,6 +47,8 @@ ul,li,p,h1,h2,h3
 		padding 0 20px
 	@media (max-width: 480px)
 		padding 0 10px
+	@media (max-width: 320px)
+		padding 0 5px
 .show
 	display block
 .hide

@@ -11,6 +11,8 @@
 		font-weight 300
 		@media (max-width: 480px)
 			margin-bottom 20px
+		@media (max-width: 375px)
+			font-size 2.3rem
 	&__list
 		display -webkit-flex
 		display -ms-flex
@@ -41,6 +43,11 @@
 			padding-left 60px
 			line-height 1.6rem
 			background-size 40px 40px
+		@media (max-width: 375px)
+			margin-bottom 0
+			padding-left 50px
+			font-size 1.5rem
+			background-size 35px 35px
 		&:nth-child(odd)
 			padding-right 20px
 			@media (max-width: 480px)
@@ -68,3 +75,7 @@
 			font-size 1.6rem
 			line-height 2.4rem
 			font-weight 700
+			@media (max-width: 375px)
+				font-size 1.3rem
+			@media (max-width: 320px)
+				min-width 80px

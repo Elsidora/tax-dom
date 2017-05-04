@@ -42,6 +42,11 @@
 				border-right none
 		@media (max-width: 414px)
 			font-size 1.6rem
+		@media (max-width: 375px)
+			&:nth-child(4)
+				border-right none
+			&:nth-child(5)
+				border-bottom none
 		&:hover,
 		&_active
 			color $white
@@ -64,32 +69,52 @@
 		background-image url(%=static=%content/cars/econom.png)
 		@media (max-width: 480px)
 			background-size 100% 28%
+		@media (max-width: 375px)
+			background-size 100% 23%
+		@media (max-width: 320px)
+			background-size 100% 20%
 	&_comfort
 		background-image url(%=static=%content/cars/comfort.png)
 		&[data-name]
 			@media (max-width: 480px)
 				background-size 100% 40%
+			@media (max-width: 375px)
+				background-size 100% 30%
+			@media (max-width: 320px)
+				background-size 100% 25%
 	&_universal
 		background-image url(%=static=%content/cars/universal.png)
 		@media (max-width: 480px)
 			background-size 100% 28%
+		@media (max-width: 375px)
+			background-size 100% 28%
+		@media (max-width: 320px)
+			background-size 100% 20%
 	&_biznes
 		background-image url(%=static=%content/cars/business.png)
 		@media (max-width: 480px)
 			background-size 100% 40%
+		@media (max-width: 375px)
+			background-size 100% 35%
+		@media (max-width: 320px)
+			background-size 100% 30%
 	&_miniven
 		background-image url(%=static=%content/cars/miniven.png)
+		background-position center bottom
 		&[data-name]
 			@media (max-width: 480px)
 				background-size 90% 29%
-				background-position center bottom
+			@media (max-width: 320px)
+				background-size 90% 25%
 	&_microbus
 		background-image url(%=static=%content/cars/microbus.png)
 		background-size 850px 330px
+		background-position center bottom
 		&[data-name]
 			@media (max-width: 480px)
 				background-size 100% 30%
-				background-position center bottom
+			@media (max-width: 320px)
+				background-size 95% 25%
 	&_active
 		display block
 	&__inner
@@ -196,7 +221,6 @@
 		@media (max-width: 480px)
 			margin-left calc(50% - 106px)
 			margin-bottom 160px
-			line-height 3.0rem
-			
+			line-height 3.0rem	
 		&:hover
 			border 3px solid $white
