@@ -1,4 +1,5 @@
 data: {
+    useSocialMetaTags: true,
     mod:'index',
     tariffs: [
           {

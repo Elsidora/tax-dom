@@ -2,30 +2,36 @@
 	padding-top 80px
 	background-image url('%=static=%general/bg1.jpg')
 	background-repeat no-repeat
-	background-position 100% bottom
 	background-size cover
+	background-position center
+	// background-attachment: fixed;
+	@media (max-width: 1024px)
+		background-position 75% center
 	&__inner
 		display -webkit-flex
 		display -ms-flex
 		display flex
-		align-items: stretch;
+		flex-wrap wrap
+		// align-items: stretch;
 		min-height 715px
-		@media (max-width: 768px)
-			flex-direction column
+		// @media (max-width: 768px)
+		// 	flex-direction column
 	&__left-col
-		min-width 40%
+		flex-basis 45%
 		@media (max-width: 768px)
-			display -webkit-flex
-			display -ms-flex
-			display flex
-			justify-content: center;
+			margin 0 auto
+			flex-basis 70%
+			padding-top 20px
+		@media (max-width: 425px)
+			flex-basis 100%
+			padding-top 0
 	&__right-col
 		display -webkit-flex
 		display -ms-flex
 		display flex
 		flex-direction column
 		justify-content: center;
-		width 60%
+		flex-basis 55%
 		padding-left 80px
 		@media (max-width: 975px)
 			padding-left 40px
@@ -35,7 +41,7 @@
 			justify-content: flex-start;
 		@media (max-width: 768px)
 			padding-top 20px
-			width 100%
+			flex-basis 100%
 		@media (max-width: 480px)
 			padding-top 10px
 			padding-left 0

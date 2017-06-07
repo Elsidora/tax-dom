@@ -1,6 +1,6 @@
 head: {
     defaults: {
-        title: 'my title',
-        useSocialMetaTags: false
+        title: 'Такси',
+        useSocialMetaTags: true
     }
 }
